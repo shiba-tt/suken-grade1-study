@@ -1,5 +1,6 @@
 name: 復習タスク
-about: 再演習や復習予定を管理するIssue
+description: 再演習や復習予定を管理するIssue
+title: "[復習] "
 labels: ["type:復習", "status:再演習待ち"]
 body:
   - type: input

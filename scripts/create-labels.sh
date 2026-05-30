@@ -1,8 +1,19 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# GitHub CLI が認証済みの状態で、リポジトリルートから実行してください。
-# 既存ラベルがある場合は色・説明を更新します。
+# GitHub CLI がインストール・認証済みの状態で、リポジトリルートから実行してください。
+# 未認証の場合は、先に `gh auth login` を実行してください。
+# 既存ラベルがある場合は色・説明を安全に更新します。
+
+if ! command -v gh >/dev/null 2>&1; then
+  echo "GitHub CLI 'gh' が見つかりません。インストール後に再実行してください。" >&2
+  exit 1
+fi
+
+if ! gh auth status >/dev/null 2>&1; then
+  echo "GitHub CLI が未認証です。'gh auth login' を実行してください。" >&2
+  exit 1
+fi
 
 create_or_update_label() {
   local name="$1"

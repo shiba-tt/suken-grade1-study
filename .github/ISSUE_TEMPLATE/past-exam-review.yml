@@ -1,5 +1,6 @@
 name: 過去問復習
-about: 過去問演習後の復習と対策を管理するIssue
+description: 過去問演習後の復習と対策を管理するIssue
+title: "[過去問] "
 labels: ["type:過去問", "area:過去問"]
 body:
   - type: input

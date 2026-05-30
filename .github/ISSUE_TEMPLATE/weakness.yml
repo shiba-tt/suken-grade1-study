@@ -1,5 +1,6 @@
 name: 弱点管理
-about: 苦手分野や再発するミスを管理するIssue
+description: 苦手分野や再発するミスを管理するIssue
+title: "[弱点] "
 labels: ["type:弱点", "status:要復習"]
 body:
   - type: input

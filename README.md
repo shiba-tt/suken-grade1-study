@@ -56,3 +56,19 @@
 | `reviews/`                | 週次・月次レビュー                            |
 | `prompts/`                | AIにそのまま渡すプロンプト集                  |
 | `.github/ISSUE_TEMPLATE/` | 弱点・復習・過去問レビュー用Issueテンプレート |
+
+## 初回セットアップ後にやること
+
+1. ラベル作成スクリプトを確認する
+2. 必要であれば以下を実行してGitHub Labelsを作成する
+
+   ```bash
+   chmod +x scripts/create-labels.sh
+   ./scripts/create-labels.sh
+   ```
+
+3. `current_status.md` を現在の状況に合わせて更新する
+4. `logs/2026/06.md` に初回学習ログを書く
+5. 必要な弱点をIssue化する
+
+ラベルの詳細は `docs/github-labels.md` を参照してください。
