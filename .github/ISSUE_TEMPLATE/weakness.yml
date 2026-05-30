@@ -1,0 +1,64 @@
+name: 弱点管理
+about: 苦手分野や再発するミスを管理するIssue
+labels: ["type:弱点", "status:要復習"]
+body:
+  - type: input
+    id: area
+    attributes:
+      label: 分野
+      description: 例：解析、線形代数、複素解析、確率統計
+      placeholder: 解析
+    validations:
+      required: true
+  - type: input
+    id: problem_type
+    attributes:
+      label: 問題タイプ
+      description: 例：極値判定、置換積分、固有値計算
+    validations:
+      required: true
+  - type: textarea
+    id: current_status
+    attributes:
+      label: 現状
+      description: いま何ができて、何ができないかを書いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: mistakes
+    attributes:
+      label: 発生したミス
+      description: 具体的なミス内容を書いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: cause
+    attributes:
+      label: 原因
+      description: 計算ミス、理解不足、解法選択ミスなどを書いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: action
+    attributes:
+      label: 対策
+      description: 次に何をするかを書いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 完了条件
+      description: どの状態になったらCloseするかを書いてください。
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 優先度
+      options:
+        - high
+        - medium
+        - low
+    validations:
+      required: true
