@@ -1,0 +1,9 @@
+{
+  // 学習管理用Markdownは日本語の長い行や表が多いため、行長は制限しない。
+  // PRテンプレートなど、先頭がH1ではないMarkdownも扱うため、MD041も無効化する。
+  "config": {
+    "MD013": false,
+    "MD041": false,
+  },
+  "globs": ["**/*.md", "#node_modules"],
+}

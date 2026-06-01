@@ -1,0 +1,40 @@
+name: 復習タスク
+description: 再演習や復習予定を管理するIssue
+title: "[復習] "
+labels: ["type:復習", "status:再演習待ち"]
+body:
+  - type: input
+    id: area
+    attributes:
+      label: 対象分野
+      placeholder: 微分法
+    validations:
+      required: true
+  - type: textarea
+    id: target
+    attributes:
+      label: 復習対象
+      description: 教材名、ページ、問題番号、テーマなどを書いてください。
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: 期限
+      placeholder: YYYY-MM-DD
+    validations:
+      required: false
+  - type: textarea
+    id: tasks
+    attributes:
+      label: やること
+      description: 復習・再演習の具体的な内容を書いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 完了条件
+      description: どの状態になったらCloseするかを書いてください。
+    validations:
+      required: true

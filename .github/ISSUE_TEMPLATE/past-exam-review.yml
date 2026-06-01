@@ -1,0 +1,40 @@
+name: 過去問復習
+description: 過去問演習後の復習と対策を管理するIssue
+title: "[過去問] "
+labels: ["type:過去問", "area:過去問"]
+body:
+  - type: input
+    id: exam
+    attributes:
+      label: 実施した過去問
+      description: 回・年度・区分などを書いてください。
+    validations:
+      required: true
+  - type: input
+    id: score
+    attributes:
+      label: 得点
+      placeholder: 1次： / 2次：
+    validations:
+      required: false
+  - type: textarea
+    id: unsolved
+    attributes:
+      label: 解けなかった問題
+      description: 問題番号と、解けなかった理由を書いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: weak_area
+    attributes:
+      label: 課題分野
+      description: 分野別の課題を書いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: action
+    attributes:
+      label: 次回までの対策
+      description: 次回の過去問演習までに行う対策を書いてください。
+    validations:
+      required: true
